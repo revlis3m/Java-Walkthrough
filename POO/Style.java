@@ -1,4 +1,7 @@
 //class = style so this is stylish
+
+package POO;
+
 public class Style {
     public static void main(String[] args) {
         City lamecity = new City();
@@ -23,5 +26,22 @@ public class Style {
         System.out.println(trixCity.toString());
 
         System.out.println("Number city created is " + City.numberInstance);
+
+        Capital shame = new Capital();
+        Capital paris = new Capital("Paris", "France", 446565, "La Seine");
+
+        System.out.println(paris.toString());
+
+        //let's compare
+        City tokyo = new City("Tokyo", "Japan", 156156);
+        City tokyo1 = new City("Tokyo", "Japan", 156156);
+        if(tokyo.equals(tokyo1)) System.out.println("Same city");
+        else System.out.println("Not same city");
+
+        //Capital time
+        Capital rome = new Capital("Rome", "Italia", 4654846, "Coluseum");
+        Capital rome1 = new Capital("Rome", "Italia", 4654846, "Coluseum");
+        if(rome.equals(rome1)) System.out.println("Same city");
+        else System.out.println("Not same city");
     }
 }
