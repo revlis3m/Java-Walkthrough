@@ -17,14 +17,17 @@ public class City {
         nudeNumberInstance++;
     }
 
-    public City(String nameCity, String nameCountry, int people){
-        System.out.println("Proceding to create a city");
-        this.nameCity = nameCity;
-        this.nameCountry = nameCountry;
-        this.nbrCitizens = people;
-
-        numberInstance++;
-        nudeNumberInstance++;
+    public City(String nameCity, String nameCountry, int people) throws CityException{
+        if(people < 0) throw new CityException();
+        else{
+            System.out.println("Proceding to create a city");
+            this.nameCity = nameCity;
+            this.nameCountry = nameCountry;
+            this.nbrCitizens = people;
+    
+            numberInstance++;
+            nudeNumberInstance++;
+        }
     }
 
     //getters
