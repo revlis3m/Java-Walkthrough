@@ -11,7 +11,7 @@ public class Capital extends City{
         building = "None";
     }
 
-    public Capital(String nameCity, String nameCountry, int numberPeople, String building){
+    public Capital(String nameCity, String nameCountry, int numberPeople, String building) throws CityException{
         super(nameCity, nameCountry, numberPeople);
         this.building = building;
     }
